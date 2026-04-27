@@ -18,7 +18,9 @@ body {
     color: var(--dark-brown);
 }
 
-/* Desktop Navbar */
+/* ----------------
+Desktop Navbar 
+---------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,7 +30,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .top-nav {
@@ -38,9 +40,44 @@ body {
 }
 
 .top-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     color: var(--dark-brown);
-    padding: 8px 16px;
     border-radius: 20px;
+    padding: 4px;
+}
+
+/* Icon circle */
+.top-nav .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--pale);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+/* Active button */
+.top-nav .nav-link.active {
+    background-color: var(--peach);
+    padding: 4px 14px 4px 4px;
+}
+
+/* Active button icon */
+.top-nav .nav-link.active .nav-icon {
+    background-color: var(--orange);
+    color: var(--cream);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+/* Active button text */
+.top-nav .nav-link.active .nav-label {
+    display: inline;
+    color: var(--cream);
     font-size: 14px;
+    font-weight: 500;
 }
