@@ -1,0 +1,46 @@
+:root {
+    --cream: #FEF5EA;
+    --pale: #FBE4CF;
+    --peach: #F2A68A;
+    --orange: #E97349;
+    --brown:  #8E6A54;
+    --dark-brown: #3A1F10;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--pale);
+    color: var(--dark-brown);
+}
+
+/* Desktop Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: var(--cream);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-nav .nav-link {
+    text-decoration: none;
+    color: var(--dark-brown);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
