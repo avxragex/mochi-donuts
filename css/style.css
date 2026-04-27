@@ -25,12 +25,12 @@ Desktop Navbar
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
+    padding: 8px 24px;
     background-color: var(--cream);
 }
 
 .logo img {
-    height: 70px;
+    height: 65px;
 }
 
 .top-nav {
@@ -44,7 +44,7 @@ Desktop Navbar
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: var(--dark-brown);
+    color: var(--brown);
     border-radius: 20px;
     padding: 4px;
 }
@@ -54,8 +54,8 @@ Desktop Navbar
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background-color: var(--pale);
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
@@ -63,8 +63,8 @@ Desktop Navbar
 
 /* Active button */
 .top-nav .nav-link.active {
-    background-color: var(--peach);
-    padding: 4px 14px 4px 4px;
+    padding: 0;
+    gap: 0;
 }
 
 /* Active button icon */
@@ -72,12 +72,26 @@ Desktop Navbar
     background-color: var(--orange);
     color: var(--cream);
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    position: relative;
 }
 
 /* Active button text */
 .top-nav .nav-link.active .nav-label {
-    display: inline;
+    display: flex;
+    align-items: center;
+    background-color: var(--peach);
     color: var(--cream);
-    font-size: 14px;
-    font-weight: 500;
+    height: 44px;
+    padding: 0 16px 0 22px;
+    border-radius: 36px;
+    margin-left: -16px;
+}
+
+/* Google Symbols */
+.top-nav .material-symbols-rounded {
+    font-size: 24px;
+}
+
+.bottom-nav {
+    display: none;
 }
