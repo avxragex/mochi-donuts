@@ -302,31 +302,37 @@ search input::placeholder {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin-top: 100px;
-    gap: 60px 100px;
+    margin-top: 50px;
+    gap: 80px 140px;
 }
 
 .product-grid .donut-card {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px 24px 20px 110px;
+    padding: 20px 24px 20px 140px;
     border-radius: 20px;
     position: relative;
     overflow: visible;
+    min-height: 160px;
 }
 
 .product-grid .donut-card figure {
     position: absolute;
-    left: -60px;
+    left: -85px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 
 .product-grid .donut-card figure img {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
+}
+
+.product-grid .donut-card .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .card-info h3 {
