@@ -16,7 +16,7 @@
 body {
     background-color: var(--pale);
     color: var(--dark-brown);
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Nunito', sans-serif;
 }
 
