@@ -151,6 +151,10 @@ Hero Section
     z-index: 0;
 }
 
+.hero-image img {
+    filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.3));
+}
+
 
 /* ----------------
 Featured Section
@@ -213,7 +217,7 @@ Featured Section
     width: 100%;
     height: 180px;
     object-fit: contain;
-
+    filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.15));
 }
 
 .donut-card h3 {
@@ -327,6 +331,7 @@ search input::placeholder {
 .product-grid .donut-card figure img {
     width: 200px;
     height: 200px;
+    filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.2));
 }
 
 .product-grid .donut-card .card-info {
