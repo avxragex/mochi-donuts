@@ -39,7 +39,7 @@ Desktop Navbar
     right: 0;
     width: 280px;
     height: 100%;
-    background: var(--cream);
+    background-color: var(--cream);
     z-index: 9;
 }
 
@@ -115,6 +115,10 @@ Desktop Navbar
 .bottom-nav {
     display: none;
 }
+
+/* ******************************************************* */
+/* Index Page */
+/* ******************************************************* */
 
 /* ----------------
 Hero Section
@@ -221,4 +225,82 @@ Featured Section
 .donut-card p {
     font-size: 18px;
     color: var(--cream);
+}
+
+/* ******************************************************* */
+/* Browse Page */
+/* ******************************************************* */
+.browse-page {
+    padding: 36px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+    position: relative;
+    left: 12.5%
+}
+
+/* Search Bar + filter */
+search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+search input {
+    flex: 0.4;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--dark-brown);
+    outline: none;
+}
+
+search input::placeholder {
+    color: var(--brown);
+}
+
+.btn-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--cream);
+    color: var(--brown);
+    cursor: pointer;
+}
+
+/* Category tabs */
+.category-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.category-tab {
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: none;
+    color: var(--brown);
+    background-color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.category-tab.active {
+    background-color: var(--peach);
+    color: var(--cream);
+}
+
+/* Donut Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
 }
