@@ -202,11 +202,16 @@ Featured Section
 }
 
 .donut-card {
-    background-color: var(--peach);
+    background-color: var(--pale);
     border-radius: 16px;
     padding: 12px 12px 16px;
     cursor: pointer;
     flex: 1;
+    transition: 0.3s ease;
+}
+
+.donut-card:hover {
+    background-color: var(--peach);
 }
 
 .donut-card figure {
@@ -222,13 +227,23 @@ Featured Section
 
 .donut-card h3 {
     font-size: 20px;
-    color: var(--cream);
+    color: var(--dark-brown);
     margin-bottom: 4px;
+    transition: 0.3s ease;
+}
+
+.donut-card:hover h3 {
+  color: var(--cream);
 }
 
 .donut-card p {
     font-size: 18px;
-    color: var(--cream);
+    color: var(--dark-brown);
+    transition: 0.3s ease;
+}
+
+.donut-card:hover p {
+  color: var(--cream);
 }
 
 /* ******************************************************* */
@@ -239,9 +254,8 @@ Featured Section
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
-    position: relative;
-    left: 25%
+    width: 75%;
+    margin: 0 auto;
 }
 
 /* Search Bar + filter */
@@ -318,6 +332,11 @@ search input::placeholder {
     position: relative;
     overflow: visible;
     min-height: 160px;
+    background-color: var(--cream);
+}
+
+.product-grid .donut-card:hover {
+    background-color: var(--peach);
 }
 
 .product-grid .donut-card figure {
@@ -342,11 +361,11 @@ search input::placeholder {
 
 .card-info h3 {
     font-size: 22px;
-    color: var(--cream);
+    color: var(--brown);
     margin-bottom: 10px;
 }
 
 .card-info p {
     font-size: 18px;
-    color: var(--cream);
+    color: var(--brown);
 }
