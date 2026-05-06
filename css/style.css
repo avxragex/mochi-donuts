@@ -381,6 +381,7 @@ search input::placeholder {
 /* ******************************************************* */
 /* Product Page */
 /* ******************************************************* */
+/* Product Detail Header */
 .product-page .product-hero {
     background-color: var(--pale);
     padding: 48px;
@@ -426,4 +427,58 @@ search input::placeholder {
     display: flex;
     gap: 48px;
     min-height: 60vh;
+}
+
+/* Product Info Section */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 45%;
+    font-size: 18px;
+    color: var(--dark-brown);
+}
+
+/* Quantity / Add to Cart */
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--cream);
+    cursor: pointer;
+}
+
+.product-info h3 {
+    color: var(--dark-brown);
+    font-size: 21px;
+}
+
+.btn-add-cart {
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    background-color: var(--orange);
+    color: var(--cream);
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
 }
