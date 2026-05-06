@@ -32,6 +32,12 @@ Desktop Navbar
     position: relative;
 }
 
+.browse-body .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .navbar::after {
     content: '';
     position: absolute;
@@ -148,7 +154,7 @@ Hero Section
     right: -50px;
     top: -380px;
     margin: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 .hero-image img {
