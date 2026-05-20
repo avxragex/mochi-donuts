@@ -65,6 +65,11 @@ function loadProductPage() {
         for (let i = 0; i < quantity; i++) {
             addToCart(donut.id);
         }
+
+        // Display add to cart notification
+        const notif = document.getElementById('cart-notif');
+        notif.classList.add('show');
+        setTimeout(() => notif.classList.remove('show'), 2000);
     });
 
     // Update Donut Nutrition Info
