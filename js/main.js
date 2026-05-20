@@ -39,10 +39,32 @@ function loadProductPage() {
     document.querySelector('.product-hero-image img').src = donut.image;
     document.querySelector('.product-hero-image img').alt = donut.name;
 
+    // Add to cart quantity
+    let quantity = 1;
+    
+    const minusBtn = document.querySelector('.quantity-selector .btn-minus');
+    const plusBtn = document.querySelector('.quantity-selector .btn-plus');
+    const qtyDisplay = document.querySelector('.quantity-selector h3');
+
+    // Minus quantity
+    minusBtn.addEventListener('click', () => {
+        if (quantity > 1) {
+            quantity -= 1;
+            qtyDisplay.textContent = quantity;
+        }
+    });
+
+    // Add quantity
+    plusBtn.addEventListener('click', () => {
+        quantity += 1;
+        qtyDisplay.textContent = quantity;
+    });
+
     // Event listener to add donut to cart
     document.querySelector('.btn-add-cart').addEventListener('click', () => {
-        addToCart(donut.id);
-        console.log(cart);
+        for (let i = 0; i < quantity; i++) {
+            addToCart(donut.id);
+        }
     });
 
     // Update Donut Nutrition Info
@@ -69,6 +91,7 @@ function createFeaturedCards() {
 // Function to load cart items
 function loadCart() {
     const cartItems = document.querySelector('.cart-items');
+    cartItems.innerHTML = '';
 
     if (cart.length === 0) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
@@ -98,29 +121,6 @@ function loadCart() {
         `;
     }
 }
-
-/*
-           <article class="cart-card">
-                <!-- Image + Title -->
-                <figure>
-                    <img src="images/biscoff.png" alt="Biscoff donut">
-                </figure>
-                <div class="cart-card-info">
-                    <h3>Biscoff with Caramel Drizzle</h3>
-                    <p>$4.50</p>
-                </div>
-                <!-- Quantity -->
-                <div class="cart-quantity">
-                    <button class="btn-qty">
-                        <span class="material-symbols-rounded">remove</span>
-                    </button>
-                    <span class="qty-count">1</span>
-                    <button class="btn-qty">
-                        <span class="material-symbols-rounded">add</span>
-                    </button>
-                </div>
-            </article>
-*/
 
 createBrowseCards();
 loadProductPage();
