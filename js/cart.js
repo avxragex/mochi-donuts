@@ -1,5 +1,5 @@
 // Cart array to store cart items
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Function to add items to cart
 function addToCart(id) {
@@ -21,6 +21,9 @@ function addToCart(id) {
             quantity: 1
         });
     }
+
+    // Save cart
+    saveCart();
 }
 
 // Function to increase quantity
@@ -29,6 +32,7 @@ function increaseQty(id) {
     if (!item) return;
     item.quantity += 1;
     loadCart();
+    saveCart();
 }
 
 // Function to decrease quantity
@@ -47,4 +51,10 @@ function decreaseQty(id) {
     }
 
     loadCart();
+    saveCart();
+}
+
+// Function to save current cart to local storage
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }

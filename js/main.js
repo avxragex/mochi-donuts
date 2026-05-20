@@ -39,6 +39,12 @@ function loadProductPage() {
     document.querySelector('.product-hero-image img').src = donut.image;
     document.querySelector('.product-hero-image img').alt = donut.name;
 
+    // Event listener to add donut to cart
+    document.querySelector('.btn-add-cart').addEventListener('click', () => {
+        addToCart(donut.id);
+        console.log(cart);
+    });
+
     // Update Donut Nutrition Info
 }
 
