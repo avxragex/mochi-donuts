@@ -60,6 +60,63 @@ function createFeaturedCards() {
     }
 }
 
+// Function to load cart items
+function loadCart() {
+    const cartItems = document.querySelector('.cart-items');
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+    }
+
+    for (let i = 0; i < cart.length; i++) {
+        cartItems.innerHTML += `
+            <article class="cart-card">
+                <figure>
+                    <img src="${cart[i].image}" alt="${cart[i].name}">
+                </figure>
+                <div class="cart-card-info">
+                    <h3>${cart[i].name}</h3>
+                    <p>$${cart[i].price}</p>
+                </div>
+                <div class="cart-quantity">
+                    <button class="btn-qty" onclick="decreaseQty(${cart[i].id})">
+                        <span class="material-symbols-rounded">remove</span>
+                    </button>
+                    <span class="qty-count">${cart[i].quantity}</span>
+                    <button class="btn-qty" onclick="increaseQty(${cart[i].id})">
+                        <span class="material-symbols-rounded">add</span>
+                    </button>
+                </div>
+            </article>
+        `;
+    }
+}
+
+/*
+           <article class="cart-card">
+                <!-- Image + Title -->
+                <figure>
+                    <img src="images/biscoff.png" alt="Biscoff donut">
+                </figure>
+                <div class="cart-card-info">
+                    <h3>Biscoff with Caramel Drizzle</h3>
+                    <p>$4.50</p>
+                </div>
+                <!-- Quantity -->
+                <div class="cart-quantity">
+                    <button class="btn-qty">
+                        <span class="material-symbols-rounded">remove</span>
+                    </button>
+                    <span class="qty-count">1</span>
+                    <button class="btn-qty">
+                        <span class="material-symbols-rounded">add</span>
+                    </button>
+                </div>
+            </article>
+*/
+
 createBrowseCards();
 loadProductPage();
 createFeaturedCards();
+loadCart();

@@ -18,7 +18,33 @@ function addToCart(id) {
             name: donut.name,
             price: donut.price,
             image: donut.image,
-            quanity: 1
+            quantity: 1
         });
     }
+}
+
+// Function to increase quantity
+function increaseQty(id) {
+    const item = cart.find(item => item.id === id);
+    if (!item) return;
+    item.quantity += 1;
+    loadCart();
+}
+
+// Function to decrease quantity
+function decreaseQty(id) {
+    const item = cart.find(item => item.id === id);
+    if (!item) return;
+
+    // Decrease quantity if more than 1 donut quantity
+    if (item.quantity > 1) {
+        item.quantity -= 1;
+    } 
+    
+    // If only 1, remove from cart
+    else {
+        cart = cart.filter(item => item.id !== id);
+    }
+
+    loadCart();
 }
