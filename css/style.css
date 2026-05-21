@@ -25,6 +25,8 @@ Footer
 ---------------- */
 .footer {
     background-color: var(--dark-brown);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-top {
@@ -335,6 +337,7 @@ Featured Section
     gap: 20px;
     width: 75%;
     margin: 0 auto;
+    margin-bottom: 60px;
 }
 
 /* Search Bar + filter */
@@ -567,15 +570,17 @@ search input::placeholder {
 
 .cart-notif {
     position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: var(--dark-brown);
     color: var(--cream);
-    padding: 14px 32px;
+    padding: 10px;
+    width: 100vw;
+    height: 50px;
+    top: 0px;
+    z-index: 10;
     font-size: 18px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-align: center;
 }
 
 .cart-notif.show {
