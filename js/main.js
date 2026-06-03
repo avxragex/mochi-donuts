@@ -99,11 +99,25 @@ function loadCart() {
     if (!cartItems) return;
     cartItems.innerHTML = '';
 
+    // Calculate prices
+    const subtotal = cart.reduce((sum,item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.15;
+    const total = subtotal + tax;
+
+    // Change HTML prices
+    document.querySelector('.summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.querySelector('.summary-tax').textContent = `$${tax.toFixed(2)}`;
+    document.querySelector('.summary-total-price').textContent = `$${total.toFixed(2)}`;
+
+    updateCartIcon();
+
+    // Check if empty
     if (cart.length === 0) {
         cartItems.innerHTML = '<p>Your cart is empty.</p>';
         return;
     }
 
+    // Add donuts to cart
     for (let i = 0; i < cart.length; i++) {
         cartItems.innerHTML += `
             <article class="cart-card">
@@ -126,18 +140,6 @@ function loadCart() {
             </article>
         `;
     }
-
-    // Calculate prices
-    const subtotal = cart.reduce((sum,item) => sum + (item.price * item.quantity), 0);
-    const tax = subtotal * 0.15;
-    const total = subtotal + tax;
-
-    // Change HTML prices
-    document.querySelector('.summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
-    document.querySelector('.summary-tax').textContent = `$${tax.toFixed(2)}`;
-    document.querySelector('.summary-total-price').textContent = `$${total.toFixed(2)}`;
-
-    updateCartIcon();
 }
 
 // Page Initialisation Calls

@@ -50,6 +50,7 @@ function decreaseQty(id) {
     // If only 1, remove from cart
     else {
         cart = cart.filter(item => item.id !== id);
+        console.log(cart);
     }
 
     loadCart();
