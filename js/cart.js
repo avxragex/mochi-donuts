@@ -24,6 +24,7 @@ function addToCart(id) {
 
     // Save cart
     saveCart();
+    updateCartIcon();
 }
 
 // Function to increase quantity
@@ -33,6 +34,7 @@ function increaseQty(id) {
     item.quantity += 1;
     loadCart();
     saveCart();
+    updateCartIcon();
 }
 
 // Function to decrease quantity
@@ -52,9 +54,23 @@ function decreaseQty(id) {
 
     loadCart();
     saveCart();
+    updateCartIcon();
 }
 
 // Function to save current cart to local storage
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Function to show cart icon number
+function updateCartIcon() {
+    const cartNumber = document.getElementById("cart-number");
+    console.log("cart number element:", cartNumber);
+    console.log("cart:", cart);
+    if (!cartNumber) return;
+
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartNumber.textContent = totalItems;
+    // Only toggle visiblity if at least one cart item
+    cartNumber.classList.toggle('visible', totalItems > 0);
 }

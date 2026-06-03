@@ -96,6 +96,7 @@ function createFeaturedCards() {
 // Function to load cart items
 function loadCart() {
     const cartItems = document.querySelector('.cart-items');
+    if (!cartItems) return;
     cartItems.innerHTML = '';
 
     if (cart.length === 0) {
@@ -131,12 +132,17 @@ function loadCart() {
     const tax = subtotal * 0.15;
     const total = subtotal + tax;
 
-    document.querySelector('.summary-subtotal').textContent = `$${subtotal}`;
-    document.querySelector('.summary-tax').textContent = `$${tax}`;
-    document.querySelector('.summary-total-price').textContent = `$${total}`;
+    // Change HTML prices
+    document.querySelector('.summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.querySelector('.summary-tax').textContent = `$${tax.toFixed(2)}`;
+    document.querySelector('.summary-total-price').textContent = `$${total.toFixed(2)}`;
+
+    updateCartIcon();
 }
 
+// Page Initialisation Calls
 createBrowseCards();
 loadProductPage();
 createFeaturedCards();
 loadCart();
+updateCartIcon();
