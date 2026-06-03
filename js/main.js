@@ -125,6 +125,15 @@ function loadCart() {
             </article>
         `;
     }
+
+    // Calculate prices
+    const subtotal = cart.reduce((sum,item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.15;
+    const total = subtotal + tax;
+
+    document.querySelector('.summary-subtotal').textContent = `$${subtotal}`;
+    document.querySelector('.summary-tax').textContent = `$${tax}`;
+    document.querySelector('.summary-total-price').textContent = `$${total}`;
 }
 
 createBrowseCards();
