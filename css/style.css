@@ -16,8 +16,11 @@
 body {
     background-color: var(--pale);
     color: var(--dark-brown);
-    overflow-x: hidden;
     font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 /* ----------------
@@ -437,7 +440,7 @@ search input::placeholder {
     padding: 20px 24px 20px 140px;
     border-radius: 20px;
     position: relative;
-    overflow: visible;
+    overflow-y: visible;
     min-height: 160px;
     background-color: var(--cream);
 }
@@ -801,15 +804,18 @@ search input::placeholder {
         display: none;
     }
 
-    /* Bottom Nav */
+    /* ----------------
+    Mobile Navbar 
+    ---------------- */
     .bottom-nav {
         display: flex;
         align-items: center;
         gap: 8px;
         z-index: 100;
-        position: sticky;
+        position: fixed;
         bottom: 20px;
-        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
         width: fit-content;
         background-color: var(--cream);
         border-radius: 100px;
@@ -877,5 +883,129 @@ search input::placeholder {
 
     body {
         padding-bottom: 80px;
+    }
+
+    /* ******************************************************* */
+    /* Index Page */
+    /* ******************************************************* */
+
+    /* ----------------
+    Hero Section
+    ---------------- */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--pale);
+        padding: 24px 24px 0;
+        min-height: unset;
+    }
+
+    .hero-text {
+        font-size: 36px;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 16px auto 0;
+    }
+
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    /* ----------------
+    Featured Section
+    ---------------- */
+    .featured {
+        background-color: var(--cream);
+        border-radius: 24px 24px 0 0;
+        padding: 0 48px 48px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: calc(100vh - 485px);
+    }
+
+    .btn-browse {
+        display: inline-block;
+        text-decoration: none;
+        font-family: 'Fraunces', serif;
+        background-color: var(--orange);
+        color: var(--cream);
+        padding: 12px 40px;
+        border-radius: 30px;
+        font-size: 18px;
+        margin: 64px 0 32px;
+    }
+
+    .featured h2 {
+        font-size: 30px;
+        font-family: 'Fraunces', serif;
+        margin: 0 auto 20px;
+        max-width: 1080px;
+        width: 100%;
+        color: var(--brown);
+    }
+
+    /* Donut Cards */
+    .featured-grid {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    .donut-card {
+        background-color: var(--pale);
+        text-decoration: none;
+        border-radius: 16px;
+        padding: 12px 12px 16px;
+        cursor: pointer;
+        flex: 1;
+        transition: 0.3s ease;
+    }
+
+    .donut-card:hover {
+        background-color: var(--peach);
+    }
+
+    .donut-card figure {
+        margin: 0 0 12px;
+    }
+
+    .donut-card figure img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    .donut-card h3 {
+        font-size: 20px;
+        color: var(--dark-brown);
+        margin-bottom: 4px;
+        transition: 0.3s ease;
+    }
+
+    .donut-card:hover h3 {
+    color: var(--cream);
+    }
+
+    .donut-card p {
+        font-size: 18px;
+        color: var(--dark-brown);
+        transition: 0.3s ease;
+    }
+
+    .donut-card:hover p {
+    color: var(--cream);
     }
 }
