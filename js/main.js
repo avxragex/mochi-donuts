@@ -142,9 +142,39 @@ function loadCart() {
     }
 }
 
+// Function to change the checkout states
+function loadCheckout() {
+    const summaryView = document.getElementById('summary-view');
+    if (!summaryView) return;
+
+    // Proceed Button
+    // Hides cart summary shows payment form
+    document.getElementById('btn-proceed').addEventListener('click', () => {
+        document.getElementById('summary-view').classList.add('hidden');
+        document.getElementById('payment-view').classList.remove('hidden');
+    });
+
+    // Submit form
+    // Hides form shows payment succesful
+    document.getElementById('payment-form').addEventListener('submit', (e) => {
+        e.preventDefault(); // Dont refresh
+        document.getElementById('payment-view').classList.add('hidden');
+        document.getElementById('success-view').classList.remove('hidden');
+    });
+
+    // Finish payment
+    // Reset cart
+    document.getElementById('btn-okay').addEventListener('click', () => {
+        cart = [];
+        saveCart();
+        window.location = 'index.html';
+    });
+}
+
 // Page Initialisation Calls
 createBrowseCards();
 loadProductPage();
 createFeaturedCards();
 loadCart();
+loadCheckout();
 updateCartIcon();

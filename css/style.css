@@ -703,3 +703,7 @@ search input::placeholder {
 .order-summary .btn-add-cart {
     margin-top: 40px;
 }
+
+.hidden {
+    display: none;
+}
