@@ -909,7 +909,8 @@ search input::placeholder {
         position: relative;
         right: auto;
         top: auto;
-        margin: 16px auto 0;
+        margin: 16px auto -70px;
+        z-index: 10;
     }
 
     .hero-image img {
@@ -921,7 +922,7 @@ search input::placeholder {
     Featured Section
     ---------------- */
     .featured {
-        padding: 0 20px 48px;
+        padding: 60px 20px 48px;
     }
 
     .btn-browse {
