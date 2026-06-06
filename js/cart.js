@@ -65,13 +65,21 @@ function saveCart() {
 
 // Function to show cart icon number
 function updateCartIcon() {
-    const cartNumber = document.getElementById("cart-number");
-    console.log("cart number element:", cartNumber);
-    console.log("cart:", cart);
-    if (!cartNumber) return;
-
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartNumber.textContent = totalItems;
-    // Only toggle visiblity if at least one cart item
-    cartNumber.classList.toggle('visible', totalItems > 0);
+
+    // Cart Number Desktop
+    const cartNumber = document.getElementById("cart-number");
+    if (cartNumber) {
+        cartNumber.textContent = totalItems;
+        // Only toggle visiblity if at least one cart item
+        cartNumber.classList.toggle('visible', totalItems > 0);
+    }
+
+    // Cart Number Mobile
+    const cartNumberMobile = document.getElementById("cart-number-mobile");
+    if (cartNumberMobile) {
+        cartNumberMobile.textContent = totalItems;
+        // Only toggle visiblity if at least one cart item
+        cartNumberMobile.classList.toggle('visible', totalItems > 0);
+    }
 }

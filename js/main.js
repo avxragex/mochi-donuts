@@ -34,10 +34,11 @@ function loadProductPage() {
     // Update Donut Info
     document.querySelector('.product-thumbnail img').src = donut.image;
     document.querySelector('.product-thumbnail img').alt = donut.name;
-    document.querySelector('.product-header h1').textContent = donut.name;
-    document.querySelector('.product-header .product-price').textContent = `$${donut.price}`;
     document.querySelector('.product-hero-image img').src = donut.image;
     document.querySelector('.product-hero-image img').alt = donut.name;
+    // Change donut header info for both mobile and desktop
+    document.querySelectorAll('.product-header h1').forEach(element => element.textContent = donut.name);
+    document.querySelectorAll('.product-header .product-price').forEach(element => element.textContent = `$${donut.price}`);
 
     // Add to cart quantity
     let quantity = 1;
