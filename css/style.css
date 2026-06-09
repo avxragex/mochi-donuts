@@ -28,6 +28,8 @@ Footer
 ---------------- */
 .footer {
     background-color: var(--dark-brown);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-main {
@@ -51,7 +53,6 @@ Footer
 
 .footer-col h4 {
     color: var(--cream);
-    font-family: 'Fraunces', serif;
     font-size: 16px;
     margin-bottom: 4px;
 }
@@ -369,8 +370,7 @@ Featured Section
     flex-direction: column;
     gap: 20px;
     width: 75%;
-    margin: 0 auto;
-    margin-bottom: 60px;
+    margin: 0 auto 150px;
 }
 
 /* Search Bar + filter */
@@ -633,7 +633,7 @@ search input::placeholder {
     gap: 40px;
     padding: 48px;
     width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 150px;
 }
 
 /* Cart items list */
@@ -932,7 +932,8 @@ search input::placeholder {
     Featured Section
     ---------------- */
     .featured {
-        padding: 60px 20px 48px;
+        padding: 80px 20px 64px;
+        gap: 16px;
     }
 
     .btn-browse {
@@ -958,7 +959,7 @@ search input::placeholder {
         padding: 20px 16px;
         gap: 16px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 64px;
     }
 
     /* Search Bar + filter */
