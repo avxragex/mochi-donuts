@@ -1176,8 +1176,29 @@ search input::placeholder {
         background-color: var(--cream);
         border-radius: 24px 24px 0 0;
         padding: 32px 24px 100px;
-        z-index: 20;
+        z-index: 30;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Overlay to seperate payment / success views */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 20;
+    }
+
+    /* When payment / success views aren't hidden */
+    body:has(#payment-view:not(.hidden)) .modal-overlay,
+    body:has(#success-view:not(.hidden)) .modal-overlay {
+        display: block;
+    }
+
+    /* Stop HTML overflow */
+    html:has(#payment-view:not(.hidden)),
+    html:has(#success-view:not(.hidden)) {
+        overflow: hidden;
     }
 
     .btn-close-panel {
