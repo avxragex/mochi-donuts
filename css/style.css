@@ -1005,9 +1005,30 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     .bottom-nav .material-symbols-rounded {
         font-size: 24px;
     }
+    
+    /* ----------------
+    Footer
+    ---------------- */
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 48px 0 40px;
+        gap: 36px;
+    }
 
-    .footer {
-        padding-bottom: 80px;
+    .footer-brand {
+        align-items: center;
+        max-width: 260px;
+    }
+
+    .footer-col {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 0 110px;
     }
 
     /* ******************************************************* */
