@@ -918,7 +918,7 @@ search input::placeholder {
     }
 
     /* Google Symbols */
-    .top-nav .material-symbols-rounded {
+    .bottom-nav .material-symbols-rounded {
         font-size: 24px;
     }
 
@@ -1102,6 +1102,10 @@ search input::placeholder {
         animation: slideDown 0.5s ease;
     }
 
+    .product-header {
+        margin-bottom: 70px;
+    }
+
     .product-header h1 {
         font-size: 34px;
         margin-bottom: 8px;
@@ -1135,6 +1139,10 @@ search input::placeholder {
     .product-actions {
         gap: 12px;
         margin-top: 24px;
+        order: -1;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
     }
 
     /* Hide hero image */
