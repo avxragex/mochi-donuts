@@ -114,7 +114,14 @@ function loadCart() {
 
     // Check if empty
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p>Your cart is empty.</p>';
+        cartItems.innerHTML = `
+            <div class="cart-empty">
+                <span class="material-symbols-rounded cart-empty-icon">shopping_bag</span>
+                <h3>Your cart is empty</h3>
+                <p>Browse the donuts we have!</p>
+                <a href="browse.html" class="btn-add-cart">Browse donuts</a>
+            </div>
+        `;
         return;
     }
 

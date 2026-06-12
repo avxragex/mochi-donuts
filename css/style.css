@@ -880,6 +880,28 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     color: var(--dark-brown);
 }
 
+/* Empty Cart */
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 60px 24px;
+    background-color: var(--cream);
+    border-radius: 20px;
+}
+
+.cart-empty h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--dark-brown);
+}
+
+.cart-empty .btn-add-cart {
+    margin-top: 8px;
+    text-decoration: none;
+}
+
 /* ******************************************************* */
 /* Mobile: 390px x 844px */
 /* ******************************************************* */
