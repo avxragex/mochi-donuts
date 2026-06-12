@@ -333,11 +333,11 @@ Featured Section
     margin: 0 0 12px;
 }
 
-.donut-card figure img {
+.featured-grid .donut-card figure img {
     width: 100%;
     height: 180px;
     object-fit: contain;
-    filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.15));
 }
 
 .donut-card h3 {
@@ -466,7 +466,7 @@ search input::placeholder {
 .product-grid .donut-card figure img {
     width: 200px;
     height: 200px;
-    filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.15));
 }
 
 .product-grid .donut-card .card-info {
