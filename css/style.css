@@ -285,16 +285,37 @@ Featured Section
     animation: slideUp 1s ease;
 }
 
+/* CTA Section */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 64px 0 48px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.cta-section h2 {
+    margin-bottom: 0 !important;
+}
+
+.cta-section p {
+    font-size: 16px;
+    color: var(--brown);
+    opacity: 0.8;
+}
+
 .btn-browse {
     display: inline-block;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     background-color: var(--orange);
     color: var(--cream);
-    padding: 12px 40px;
+    padding: 16px 40px;
     border-radius: 30px;
     font-size: 18px;
-    margin: 64px 0 32px;
+    margin: 8px 0 0;
 }
 
 .featured h2 {
@@ -303,7 +324,7 @@ Featured Section
     margin: 0 auto 20px;
     max-width: 1080px;
     width: 100%;
-    color: var(--brown);
+    color: var(--dark-brown);
 }
 
 /* Donut Cards */
@@ -946,9 +967,25 @@ search input::placeholder {
         gap: 16px;
     }
 
+    /* CTA Section */
+    .cta-section {
+        margin-bottom: 30px;
+        padding: 24px 0 24px;
+    }
+
+    .cta-section h2 {
+        margin-bottom: 0 !important;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+        color: var(--brown);
+        opacity: 0.8;
+    }
+
     .btn-browse {
         display: block;
-        margin: 32px auto 24px;
+        margin: 16;
     }
 
     /* Donut Cards */
