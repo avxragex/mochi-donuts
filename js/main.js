@@ -148,6 +148,20 @@ function loadCheckout() {
     const summaryView = document.getElementById('summary-view');
     if (!summaryView) return;
 
+    // Dont allow user to proceed checkout without items in cart
+    const proceedBtn = document.querySelector('#summary-view .btn-add-cart');
+    if (proceedBtn) {
+        if (cart.length === 0) {
+            proceedBtn.disabled = true;
+            proceedBtn.style.opacity = '0.5';
+        } 
+        
+        else {
+            proceedBtn.disabled = false;
+            proceedBtn.style.opacity = '';
+        }
+    }
+
     // Proceed Button
     // Hides cart summary shows payment form
     document.getElementById('btn-proceed').addEventListener('click', () => {
