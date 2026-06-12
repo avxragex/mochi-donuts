@@ -867,6 +867,19 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     cursor: not-allowed;
 }
 
+#payment-view,
+#success-view {
+    position: relative;
+}
+
+/* Close Button */
+.btn-close-panel {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--dark-brown);
+}
+
 /* ******************************************************* */
 /* Mobile: 390px x 844px */
 /* ******************************************************* */
@@ -1009,7 +1022,7 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     ---------------- */
     /* CTA Section */
     .cta-section {
-        padding: 80px 0 80px;
+        padding: 100px 0 80px;
     }
 
     .cta-section h2 {
@@ -1160,7 +1173,7 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     }
 
     .product-header {
-        margin-bottom: 70px;
+        margin-bottom: 10px;
     }
 
     .product-header h1 {
@@ -1195,10 +1208,8 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     /* Quantity / Add to Cart */
     .product-actions {
         gap: 12px;
-        margin-top: 24px;
         order: -1;
         margin-top: 8px;
-        margin-bottom: 24px;
         padding-bottom: 24px;
     }
 
