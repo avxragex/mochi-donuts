@@ -11,7 +11,7 @@ let temp_contains = "Gluten (wheat), dairy, eggs, soy. May contain traces of: Nu
 const donuts = [
     {
         id: 1,
-        name: "Biscoff with Caramel Drizzle",
+        name: "Biscoff Caramel",
         price: 4.50,
         image: "images/biscoff.png",
         category: "popular",
@@ -25,7 +25,7 @@ const donuts = [
     },
     {
         id: 2,
-        name: "Pistachio with Crushed Nuts",
+        name: "Pistachio Crunch",
         price: 4.50,
         image: "images/pistachio.png",
         category: "popular",
@@ -53,7 +53,7 @@ const donuts = [
     },
     {
         id: 4,
-        name: "Hojicha Tea Glaze",
+        name: "Hojicha Glaze",
         price: 4.50,
         image: "images/tea.png",
         category: "new",
@@ -81,7 +81,7 @@ const donuts = [
     },
     {
         id: 6,
-        name: "Strawberry with Vanilla",
+        name: "Strawberry Vanilla",
         price: 4.50,
         image: "images/strawberry.png",
         category: "best-sellers",
@@ -95,7 +95,7 @@ const donuts = [
     },
     {
         id: 7,
-        name: "Dark Chocolate with Sprinkles",
+        name: "Dark Chocolate",
         price: 4.50,
         image: "images/chocolate.png",
         category: "best-sellers",
