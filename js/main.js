@@ -119,7 +119,7 @@ function loadCart() {
                 <span class="material-symbols-rounded cart-empty-icon">shopping_bag</span>
                 <h3>Your cart is empty</h3>
                 <p>Browse the donuts we have!</p>
-                <a href="browse.html" class="btn-add-cart">Browse donuts</a>
+                <a href="browse.html" class="btn-add-cart">Browse Donuts</a>
             </div>
         `;
         return;

@@ -891,10 +891,21 @@ body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
     border-radius: 20px;
 }
 
+.cart-empty-icon {
+    font-size: 52px !important;
+    color: var(--peach);
+}
+
 .cart-empty h3 {
     font-family: 'Fraunces', serif;
     font-size: 24px;
     color: var(--dark-brown);
+}
+
+.cart-empty p {
+    font-size: 15px;
+    color: var(--brown);
+    opacity: 0.7;
 }
 
 .cart-empty .btn-add-cart {
