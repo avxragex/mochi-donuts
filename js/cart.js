@@ -56,6 +56,8 @@ function decreaseQty(id) {
     loadCart();
     saveCart();
     updateCartIcon();
+    // Check if cart empty for proceed button
+    loadCheckout();
 }
 
 // Function to save current cart to local storage

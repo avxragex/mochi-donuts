@@ -859,6 +859,14 @@ search input::placeholder {
     display: none !important;
 }
 
+/* Disable quantity editing when paying */
+body:has(#payment-view:not(.hidden)) .cart-card button,
+body:has(#payment-view:not(.hidden)) .cart-card .btn-qty {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* ******************************************************* */
 /* Mobile: 390px x 844px */
 /* ******************************************************* */
@@ -1027,6 +1035,7 @@ search input::placeholder {
     ---------------- */
     .featured {
         gap: 16px;
+        padding: 0 20px 80px;
     }
 
 
