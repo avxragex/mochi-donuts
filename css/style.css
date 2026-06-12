@@ -283,6 +283,7 @@ Featured Section
     align-items: center;
     min-height: calc(100vh - 485px);
     animation: slideUp 1s ease;
+    gap: 50px;
 }
 
 /* CTA Section */
@@ -293,7 +294,6 @@ Featured Section
     gap: 12px;
     padding: 64px 0 48px;
     text-align: center;
-    margin-bottom: 80px;
 }
 
 .cta-section h2 {
@@ -325,6 +325,19 @@ Featured Section
     max-width: 1080px;
     width: 100%;
     color: var(--dark-brown);
+}
+
+/* Info Divider Gap */
+.info-strip {
+    width: 100%;
+    background-color: var(--pale);
+    padding: 48px;
+    border-radius: 24px;
+    text-align: center;
+    color: var(--brown);
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Fraunces', serif;
 }
 
 /* Donut Cards */
@@ -843,6 +856,14 @@ search input::placeholder {
     
     .navbar::after {
         display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 64px;
     }
 
     /* ----------------
