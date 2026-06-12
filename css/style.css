@@ -268,36 +268,28 @@ Hero Section
     filter: drop-shadow(15px 10px 4px rgba(0, 0, 0, 0.3));
 }
 
-
 /* ----------------
 Featured Section
 ---------------- */
-.featured {
+/* CTA Section */
+.cta-section {
     background-color: var(--cream);
     border-radius: 24px 24px 0 0;
-    padding: 0 48px 150px;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 485px);
-    animation: slideUp 1s ease;
-    gap: 50px;
-}
-
-/* CTA Section */
-.cta-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 12px;
-    padding: 64px 0 48px;
+    padding: 64px 48px 48px;
     text-align: center;
+    animation: slideUp 0.6s ease;
 }
 
 .cta-section h2 {
-    margin-bottom: 0 !important;
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: var(--dark-brown);
 }
 
 .cta-section p {
@@ -318,27 +310,50 @@ Featured Section
     margin: 8px 0 0;
 }
 
+/* ----------------
+Info Strip Section
+---------------- */
+.info-strip {
+    background-color: var(--pale);
+    padding: 72px 48px;
+    display: flex;
+    justify-content: center;
+    animation: slideUp 1s ease;
+}
+
+.info-strip p {
+    max-width: 620px;
+    text-align: center;
+    color: var(--brown);
+    font-size: 17px;
+    line-height: 1.8;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+}
+
+/* ----------------
+Featured Section
+---------------- */
+.featured {
+    background-color: var(--cream);
+    padding: 0 48px 80px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 1s ease;
+}
+
 .featured h2 {
     font-size: 30px;
     font-family: 'Fraunces', serif;
-    margin: 0 auto 20px;
+    margin: 50px auto 20px;
     max-width: 1080px;
     width: 100%;
     color: var(--dark-brown);
 }
 
-/* Info Divider Gap */
-.info-strip {
-    width: 100%;
-    background-color: var(--pale);
-    padding: 48px;
-    border-radius: 24px;
-    text-align: center;
-    color: var(--brown);
-    font-size: 18px;
-    font-style: italic;
-    font-family: 'Fraunces', serif;
-}
 
 /* Donut Cards */
 .featured-grid {
@@ -980,18 +995,13 @@ search input::placeholder {
         height: 300px;
     }
 
-    /* ----------------
-    Featured Section
-    ---------------- */
-    .featured {
-        padding: 80px 20px 64px;
-        gap: 16px;
-    }
 
+    /* ----------------
+    CTA Section
+    ---------------- */
     /* CTA Section */
     .cta-section {
-        margin-bottom: 30px;
-        padding: 24px 0 24px;
+        padding: 80px 0 80px;
     }
 
     .cta-section h2 {
@@ -1003,6 +1013,23 @@ search input::placeholder {
         color: var(--brown);
         opacity: 0.8;
     }
+
+   /* ----------------
+    Info Section
+    ---------------- */
+    /* Info Strip Section */
+    .info-strip {
+        order: -1;
+    }
+
+    /* ----------------
+    Featured Section
+    ---------------- */
+    .featured {
+        gap: 16px;
+    }
+
+
 
     .btn-browse {
         display: block;
