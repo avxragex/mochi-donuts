@@ -1,13 +1,3 @@
-// Placeholder info for now to test
-let temp_calories = 380;
-let temp_protein = "5g";
-let temp_carbs = "52g (Sugars: 28g)";
-let temp_fat = "18g (Saturated: 9g)";
-let temp_sodium = "210mg";
-let temp_ingredients = "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, cinnamon, vanilla extract, and Lotus Biscoff spread (caramelised biscuits 38%, vegetable oils, sugar, soy flour, leavening agents, salt, cinnamon).";
-let temp_contains = "Gluten (wheat), dairy, eggs, soy. May contain traces of: Nuts (including peanuts and tree nuts), sesame.";
-
-// Donuts object array
 const donuts = [
     {
         id: 1,
@@ -15,13 +5,13 @@ const donuts = [
         price: 4.50,
         image: "images/biscoff.png",
         category: "popular",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 380,
+        protein: "5g",
+        carbs: "52g (Sugars: 28g)",
+        fat: "17g (Saturated: 8g)",
+        sodium: "220mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, cinnamon, vanilla extract, Lotus Biscoff spread (caramelised biscuits 38%, vegetable oils, sugar, soy flour, leavening agents, salt, cinnamon), caramel sauce.",
+        contains: "Gluten (wheat), dairy, eggs, soy. May contain traces of: Nuts (including peanuts and tree nuts), sesame."
     },
     {
         id: 2,
@@ -29,13 +19,13 @@ const donuts = [
         price: 4.50,
         image: "images/pistachio.png",
         category: "popular",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 370,
+        protein: "7g",
+        carbs: "45g (Sugars: 22g)",
+        fat: "18g (Saturated: 7g)",
+        sodium: "190mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, pistachio paste, crushed pistachios, white chocolate coating.",
+        contains: "Gluten (wheat), dairy, eggs, tree nuts (pistachios). May contain traces of: Peanuts, sesame."
     },
     {
         id: 3,
@@ -43,13 +33,13 @@ const donuts = [
         price: 4.50,
         image: "images/original-glaze.png",
         category: "popular",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 310,
+        protein: "4g",
+        carbs: "44g (Sugars: 20g)",
+        fat: "13g (Saturated: 6g)",
+        sodium: "180mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, icing sugar, water.",
+        contains: "Gluten (wheat), dairy, eggs. May contain traces of: Nuts, soy, sesame."
     },
     {
         id: 4,
@@ -57,13 +47,13 @@ const donuts = [
         price: 4.50,
         image: "images/tea.png",
         category: "new",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 330,
+        protein: "5g",
+        carbs: "46g (Sugars: 22g)",
+        fat: "14g (Saturated: 6g)",
+        sodium: "185mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, roasted hojicha green tea powder, white chocolate glaze.",
+        contains: "Gluten (wheat), dairy, eggs. May contain traces of: Nuts, soy, sesame."
     },
     {
         id: 5,
@@ -71,13 +61,13 @@ const donuts = [
         price: 4.50,
         image: "images/matcha.png",
         category: "popular",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 340,
+        protein: "5g",
+        carbs: "47g (Sugars: 23g)",
+        fat: "14g (Saturated: 6g)",
+        sodium: "185mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, ceremonial grade matcha powder, white chocolate glaze.",
+        contains: "Gluten (wheat), dairy, eggs. May contain traces of: Nuts, soy, sesame."
     },
     {
         id: 6,
@@ -85,13 +75,13 @@ const donuts = [
         price: 4.50,
         image: "images/strawberry.png",
         category: "best-sellers",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 350,
+        protein: "4g",
+        carbs: "50g (Sugars: 26g)",
+        fat: "14g (Saturated: 7g)",
+        sodium: "175mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, strawberry jam, vanilla glaze, freeze-dried strawberry pieces.",
+        contains: "Gluten (wheat), dairy, eggs. May contain traces of: Nuts, soy, sesame."
     },
     {
         id: 7,
@@ -99,12 +89,12 @@ const donuts = [
         price: 4.50,
         image: "images/chocolate.png",
         category: "best-sellers",
-        calories: temp_calories,
-        protein: temp_protein,
-        carbs: temp_carbs,
-        fat: temp_fat,
-        sodium: temp_sodium,
-        ingredients: temp_ingredients,
-        contains: temp_contains
+        calories: 395,
+        protein: "6g",
+        carbs: "50g (Sugars: 28g)",
+        fat: "20g (Saturated: 10g)",
+        sodium: "210mg",
+        ingredients: "Wheat flour, sugar, eggs, butter, vegetable oil, yeast, milk, salt, vanilla extract, dark chocolate (cocoa solids 55%), cocoa powder, chocolate glaze.",
+        contains: "Gluten (wheat), dairy, eggs, soy. May contain traces of: Nuts, sesame."
     }
 ];

@@ -65,9 +65,19 @@ function loadProductPage() {
     document.querySelector('.product-thumbnail img').alt = donut.name;
     document.querySelector('.product-hero-image img').src = donut.image;
     document.querySelector('.product-hero-image img').alt = donut.name;
+    
     // Change donut header info for both mobile and desktop
     document.querySelectorAll('.product-header h1').forEach(element => element.textContent = donut.name);
     document.querySelectorAll('.product-header .product-price').forEach(element => element.textContent = `$${donut.price.toFixed(2)}`);
+    
+    // Update donut ingredient info
+    document.getElementById('product-ingredients').textContent = donut.ingredients;
+    document.getElementById('product-contains').textContent = donut.contains;
+    document.getElementById('product-calories').textContent = donut.calories + ' kcal';
+    document.getElementById('product-protein').textContent = donut.protein;
+    document.getElementById('product-carbs').textContent = donut.carbs;
+    document.getElementById('product-fat').textContent = donut.fat;
+    document.getElementById('product-sodium').textContent = donut.sodium;
 
     // Add to cart quantity
     let quantity = 1;
